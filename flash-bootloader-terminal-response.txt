@@ -1,0 +1,89 @@
+"C:\Users\kozus\AppData\Local\Arduino15\packages\MiniCore\tools\avrdude\8.0-arduino.1/bin/avrdude" "-CC:\Users\kozus\AppData\Local\Arduino15\packages\MiniCore\tools\avrdude\8.0-arduino.1/etc/avrdude.conf" -v -patmega328p -cstk500v1 -PCOM4 -b19200 -e -Ulock:w:0xff:m -Uefuse:w:0b11111110:m -Uhfuse:w:0xd7:m -Ulfuse:w:0b11110111:m
+Avrdude version 8.0-arduino.1
+Copyright see https://github.com/avrdudes/avrdude/blob/main/AUTHORS
+
+System wide configuration file is C:\Users\kozus\AppData\Local\Arduino15\packages\MiniCore\tools\avrdude\8.0-arduino.1\etc\avrdude.conf
+
+Using port            : COM4
+Using programmer      : stk500v1
+Setting baud rate     : 19200
+AVR part              : ATmega328P
+Programming modes     : SPM, ISP, HVPP, debugWIRE
+Programmer type       : STK500
+Description           : Atmel STK500 v1
+HW Version            : 2
+FW Version            : 1.18
+Topcard               : Unknown
+Vtarget               : 0.0 V
+Varef                 : 0.0 V
+Oscillator            : Off
+SCK period            : 0.0 us
+XTAL frequency        : 7.372800 MHz
+
+AVR device initialized and ready to accept instructions
+Device signature = 1E 95 0F (ATmega328P, ATA6614Q, LGT8F328P)
+Erased chip
+
+Processing -U lock:w:0xff:m
+Reading 1 byte for lock from input file 0xff
+in 1 section [0, 0]
+Writing 1 byte (0xFF) to lock, 1 byte written, 1 verified
+
+Processing -U efuse:w:0b11111110:m
+Reading 1 byte for efuse from input file 0b11111110
+in 1 section [0, 0]
+Writing 1 byte (0xFE) to efuse, 1 byte written, 1 verified
+
+Processing -U hfuse:w:0xd7:m
+Reading 1 byte for hfuse from input file 0xd7
+in 1 section [0, 0]
+Writing 1 byte (0xD7) to hfuse, 1 byte written, 1 verified
+
+Processing -U lfuse:w:0b11110111:m
+Reading 1 byte for lfuse from input file 0b11110111
+in 1 section [0, 0]
+Writing 1 byte (0xF7) to lfuse"C:\Users\kozus\AppData\Local\Arduino15\packages\MiniCore\tools\avrdude\8.0-arduino.1/bin/avrdude" "-CC:\Users\kozus\AppData\Local\Arduino15\packages\MiniCore\tools\avrdude\8.0-arduino.1/etc/avrdude.conf" -v -patmega328p -cstk500v1 -PCOM4 -b19200 "-Uflash:w:C:\Users\kozus\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\3.0.3/bootloaders/urboot/atmega328p/watchdog_1_s/autobaud/uart0_rxd0_txd1/led+b5/urboot_atmega328p_pr_ee_ce.hex:i" -Ulock:w:0xff:m
+, 1 byte written, 1 verified
+
+Avrdude done.  Thank you.
+Avrdude version 8.0-arduino.1
+Copyright see https://github.com/avrdudes/avrdude/blob/main/AUTHORS
+
+System wide configuration file is C:\Users\kozus\AppData\Local\Arduino15\packages\MiniCore\tools\avrdude\8.0-arduino.1\etc\avrdude.conf
+
+Using port            : COM4
+Using programmer      : stk500v1
+Setting baud rate     : 19200
+AVR part              : ATmega328P
+Programming modes     : SPM, ISP, HVPP, debugWIRE
+Programmer type       : STK500
+Description           : Atmel STK500 v1
+HW Version            : 2
+FW Version            : 1.18
+Topcard               : Unknown
+Vtarget               : 0.0 V
+Varef                 : 0.0 V
+Oscillator            : Off
+SCK period            : 0.0 us
+XTAL frequency        : 7.372800 MHz
+
+AVR device initialized and ready to accept instructions
+Device signature = 1E 95 0F (ATmega328P, ATA6614Q, LGT8F328P)
+Auto-erasing chip as flash memory needs programming (-U flash:w:...)
+specify the -D option to disable this feature
+Erased chip
+
+Processing -U flash:w:C:\Users\kozus\AppData\Local\Arduino15\packages\MiniCore\hardware\avr\3.0.3/bootloaders/urboot/atmega328p/watchdog_1_s/autobaud/uart0_rxd0_txd1/led+b5/urboot_atmega328p_pr_ee_ce.hex:i
+Reading 384 bytes for flash from input file urboot_atmega328p_pr_ee_ce.hex
+in 1 section [0x7e80, 0x7fff]: 3 pages and 0 pad bytes
+Writing 384 bytes to flash
+Writing | ################################################## | 100% 0.42s
+Reading | ################################################## | 100% 0.24s
+384 bytes of flash verified
+
+Processing -U lock:w:0xff:m
+Reading 1 byte for lock from input file 0xff
+in 1 section [0, 0]
+Writing 1 byte (0xFF) to lock, 1 byte written, 1 verified
+
+Avrdude done.  Thank you.

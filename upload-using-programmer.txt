@@ -1,0 +1,45 @@
+Sketch uses 1946 bytes (6%) of program storage space. Maximum is 32384 bytes.
+Global variables use 204 bytes (9%) of dynamic memory, leaving 1844 bytes for local variables. Maximum is 2048 bytes.
+"C:\Users\kozus\AppData\Local\Arduino15\packages\MiniCore\tools\avrdude\8.0-arduino.1/bin/avrdude" "-CC:\Users\kozus\AppData\Local\Arduino15\packages\MiniCore\tools\avrdude\8.0-arduino.1/etc/avrdude.conf" -v -V -patmega328p -cstk500v1 -PCOM4 -b19200 "-Ueeprom:w:C:\Users\kozus\AppData\Local\arduino\sketches\9CF8014D5BEC43997EEA67547558D6B3/Blink.ino.eep:i" "-Uflash:w:C:\Users\kozus\AppData\Local\arduino\sketches\9CF8014D5BEC43997EEA67547558D6B3/Blink.ino.hex:i"
+Avrdude version 8.0-arduino.1
+Copyright see https://github.com/avrdudes/avrdude/blob/main/AUTHORS
+
+System wide configuration file is C:\Users\kozus\AppData\Local\Arduino15\packages\MiniCore\tools\avrdude\8.0-arduino.1\etc\avrdude.conf
+
+Using port            : COM4
+Using programmer      : stk500v1
+Setting baud rate     : 19200
+AVR part              : ATmega328P
+Programming modes     : SPM, ISP, HVPP, debugWIRE
+Programmer type       : STK500
+Description           : Atmel STK500 v1
+HW Version            : 2
+FW Version            : 1.18
+Topcard               : Unknown
+Vtarget               : 0.0 V
+Varef                 : 0.0 V
+Oscillator            : Off
+SCK period            : 0.0 us
+XTAL frequency        : 7.372800 MHz
+
+AVR device initialized and ready to accept instructions
+Device signature = 1E 95 0F (ATmega328P, ATA6614Q, LGT8F328P)
+Auto-erasing chip as flash memory needs programming (-U flash:w:...)
+specify the -D option to disable this feature
+Erased chip
+
+Processing -U eeprom:w:C:\Users\kozus\AppData\Local\arduino\sketches\9CF8014D5BEC43997EEA67547558D6B3/Blink.ino.eep:i
+Warning: no eeprom data found in Intel Hex file C:\Users\kozus\AppData\Local\arduino\sketches\9CF8014D5BEC43997EEA67547558D6B3/Blink.ino.eep
+Reading 0 bytes for eeprom from input file Blink.ino.eep
+in 0 sections of [0, -1]: 0 pages and 0 pad bytes
+Writing 0 bytes to eeprom
+Writing | ################################################## | 100% 0.00s
+0 bytes of eeprom written
+
+Processing -U flash:w:C:\Users\kozus\AppData\Local\arduino\sketches\9CF8014D5BEC43997EEA67547558D6B3/Blink.ino.hex:i
+Reading 1946 bytes for flash from input file Blink.ino.hex
+in 1 section [0, 0x799]: 16 pages and 102 pad bytes
+Writing 1946 bytes to flash
+Writing | ################################################## | 100% 2.36s
+1946 bytes of flash written
+Avrdude done.  Thank you.
