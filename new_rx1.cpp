@@ -47,5 +47,9 @@ void loop() {
             partialMessage += message;
         }
     }
-    delay(200); // Small delay to prevent overwhelming the serial output
+    else {
+        Serial.println("Status: Waiting for data");
+        delay(1000);
+    }
+     // Small delay to prevent overwhelming the serial output
 }
