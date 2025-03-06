@@ -38,9 +38,14 @@ MPU6050 mpu(0x68);
 
 // float lat = 0.0, lon = 0.0;
 float lat = 27.656908, lon = 85.327476;
+float humidity = 0.0;
+float voltage = 0.0;
+float temp_lm35 = 0.0;
+int light = 0;
 
 float pressure = 0.0;
 float altitude = 0.0;
+float heading = 0.0;
 
 
 //433MHz RF
@@ -134,31 +139,32 @@ void loop() {
   
   
   // DHT22 Data
-  float humidity = dht.readHumidity();
+  humidity = dht.readHumidity();
 //   float temp_dht = dht.readTemperature();
   
   // LM35 Data
-  float voltage = (analogRead(LM35_PIN) * 5.0) / 1024.0;
-  float temp_lm35 = voltage * 100.0;
+   voltage = (analogRead(LM35_PIN) * 5.0) / 1024.0;
+   temp_lm35 = voltage * 100.0;
 
  
   // LDR Data
-  int light = map(analogRead(LDR_PIN), 0, 1023, 0, 100);
+  light = map(analogRead(LDR_PIN), 0, 1023, 0, 100);
   
 
   // QMC5883L Data
   sVector_t mag = compass.readRaw();
-  compass.setDeclinationAngle((4.0 + (26.0 / 60.0)) / (180 / PI));
-  
+ // Check if reading is valid (non-zero)
+ if (mag.XAxis != 0 || mag.YAxis != 0) {
   // Calculate heading using arctangent of y/x
-  float heading = atan2(mag.YAxis, mag.XAxis);
+  heading = atan2(mag.YAxis, mag.XAxis);
   
-  // Correct for when signs are reversed.
-  if(heading < 0)
+  // Correct for when signs are reversed
+  if (heading < 0)
     heading += 2*PI;
   
   // Convert radians to degrees
   heading = heading * 180/PI;
+}
   
 //   String direction = getDirection(heading);
 //   float compass_x = mag.XAxis;
@@ -245,7 +251,6 @@ void loop() {
    sensorData[14] = 0xAAAA; // Start marker
    sensorData[15] = 0xFFFF; // End marker
 
-//    Serial.println(sensorData);
    delay(600);
    // Send all data at once instead of splitting into two messages
    sendMessage(sensorData, 16);
