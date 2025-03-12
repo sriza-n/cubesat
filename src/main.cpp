@@ -21,9 +21,9 @@
 #define LDR_PIN A1
 #define DHTTYPE DHT22
 
-#define QMC5883L_ADDR 0x1E
+#define QMC5883L_ADDR 0x0D
+// #define QMC5883L_ADDR 0x1E
 #define BMP180_I2C_ADDRESS 0x77
-
 
 DFRobot_QMC5883 compass(&Wire, QMC5883L_ADDR);
 
@@ -164,8 +164,10 @@ void loop() {
   
   // Convert radians to degrees
   heading = heading * 180/PI;
-}
+} 
+Serial.println(heading);
   
+  // Calculate heading using QMC5883L library
 //   String direction = getDirection(heading);
 //   float compass_x = mag.XAxis;
   

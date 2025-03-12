@@ -36,23 +36,35 @@ void loop() {
             // Check markers to ensure valid packet
             if (receivedData[14] == 0xAAAA && receivedData[15] == 0xFFFF) {
                 // Valid packet received, print the values
-                Serial.println("Valid data packet received:");
-                
-                Serial.print("Humidity: "); Serial.println(receivedData[0]);
-                Serial.print("Temperature (LM35): "); Serial.println(receivedData[1]);
-                Serial.print("Light: "); Serial.println(receivedData[2]);
-                Serial.print("Heading: "); Serial.println(receivedData[3]);
-                Serial.print("Pressure: "); Serial.println(receivedData[4]);
-                Serial.print("Altitude: "); Serial.println(receivedData[5]);
-                Serial.print("Accel X: "); Serial.println(receivedData[6]);
-                Serial.print("Accel Y: "); Serial.println(receivedData[7]);
-                Serial.print("Accel Z: "); Serial.println(receivedData[8]);
-                Serial.print("Gyro X: "); Serial.println(receivedData[9]);
-                Serial.print("Gyro Y: "); Serial.println(receivedData[10]);
-                Serial.print("Gyro Z: "); Serial.println(receivedData[11]);
-                Serial.print("Latitude: "); Serial.println(receivedData[12], 6);
-                Serial.print("Longitude: "); Serial.println(receivedData[13], 6);
-                Serial.println("------------------");
+                Serial.print("{"); 
+                Serial.print("Hum"); Serial.print(receivedData[0]);
+                Serial.print(",");
+                Serial.print("Tem"); Serial.print(receivedData[1]);
+                Serial.print(",");
+                Serial.print("Lig"); Serial.print(receivedData[2]);
+                Serial.print(",");
+                Serial.print("Hea"); Serial.print(receivedData[3]);
+                Serial.print(",");
+                Serial.print("Pres"); Serial.print(receivedData[4]);
+                Serial.print(",");
+                Serial.print("Alt"); Serial.print(receivedData[5]);
+                Serial.print(",");
+                Serial.print("AX"); Serial.print(receivedData[6]);
+                Serial.print(",");
+                Serial.print("AY"); Serial.print(receivedData[7]);
+                Serial.print(",");
+                Serial.print("AZ"); Serial.print(receivedData[8]);
+                Serial.print(",");
+                Serial.print("GX"); Serial.print(receivedData[9]);
+                Serial.print(",");
+                Serial.print("GY"); Serial.print(receivedData[10]);
+                Serial.print(",");
+                Serial.print("GZ"); Serial.print(receivedData[11]);
+                Serial.print(",");
+                Serial.print("Lat"); Serial.print(receivedData[12], 6);
+                Serial.print(",");
+                Serial.print("Lon"); Serial.print(receivedData[13], 6);
+                Serial.println("}");
             } else {
                 Serial.println("Invalid packet - markers not found");
             }
