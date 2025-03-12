@@ -71,6 +71,11 @@ void loop() {
         } else {
             Serial.println("Unexpected data size - packet may be corrupted");
         }
+
     }
-    delay(200);  // Small delay to prevent overwhelming the serial output
+    else {
+        // No data received
+        Serial.println(" waiting for data");
+        delay(200);
+    }
 }
