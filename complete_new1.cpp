@@ -266,7 +266,7 @@ void loop() {
   Serial.print("Marker: 0x"); Serial.println(sensorData[10], HEX);
   Serial.println("-------------------");
 
-  // delay(600);
+  delay(600);
   sendMessage(sensorData, 11); // Update size from 12 to 11
-  // delay(100);
+  delay(100);
 }
