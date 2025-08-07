@@ -8,6 +8,55 @@ This project consists of two main components:
 - **CubeSat.cpp**: Satellite-side code that collects sensor data and transmits it via RF
 - **Ground.cpp**: Ground station code that receives and displays telemetry data
 
+## 📁 Project Structure
+
+```
+cubesat/
+├── CubeSat.cpp              # Satellite transmitter code
+├── Ground.cpp               # Ground station receiver code
+├── README.md                # This file
+├── docs/                    # Documentation and guides
+│   ├── circuit-diagram.png  # Wiring diagrams
+│   ├── pcb-layout.pdf       # PCB design files
+│   └── setup-guide.pdf      # Detailed setup instructions
+├── libraries/               # Required Arduino libraries
+│   ├── VirtualWire.zip
+│   ├── TinyGPS.zip
+│   └── MPU6050.zip
+└── hardware/               # Hardware specifications
+    ├── bom.csv             # Bill of materials
+    └── 3d-models/          # 3D printable parts
+```
+
+## 📥 Downloads
+
+### Quick Start Files
+- 📄 [CubeSat Code](./CubeSat.cpp) - Download satellite code
+- 📄 [Ground Station Code](./Ground.cpp) - Download receiver code
+- 📋 [Bill of Materials](./hardware/bom.csv) - Component list with part numbers
+
+### Documentation
+- 📖 [Setup Guide PDF](./docs/setup-guide.pdf) - Detailed installation instructions
+- 🔌 [Circuit Diagram](./docs/circuit-diagram.png) - Wiring schematic
+- 🖨️ [PCB Layout](./docs/pcb-layout.pdf) - PCB design files
+
+### Libraries Package
+- 📦 [All Required Libraries](./libraries/) - Complete library collection
+- 🔗 [MiniCore Bootloader](https://github.com/MCUdude/MiniCore/releases/latest) - External link
+
+## 🖼️ Project Images
+
+### Circuit Diagrams
+![CubeSat Wiring Diagram](./docs/circuit-diagram.png)
+*Complete wiring schematic for CubeSat sensors and RF transmitter*
+
+### Project Photos
+![CubeSat Assembly](./docs/cubesat-assembly.jpg)
+*Assembled CubeSat with all sensors mounted*
+
+![Ground Station Setup](./docs/ground-station.jpg)
+*Ground station with RF receiver and Arduino Nano*
+
 ## Hardware Requirements
 
 ### CubeSat (Transmitter)
@@ -32,17 +81,22 @@ This project consists of two main components:
 
 The ATmega328P requires a compatible bootloader for Arduino IDE programming:
 
-1. Download MiniCore from: https://github.com/MCUdude/MiniCore
+1. Download MiniCore from: [https://github.com/MCUdude/MiniCore](https://github.com/MCUdude/MiniCore)
 2. Install MiniCore in Arduino IDE:
    - File → Preferences → Additional Board Manager URLs
    - Add: `https://mcudude.github.io/MiniCore/package_MCUdude_MiniCore_index.json`
    - Tools → Board Manager → Search "MiniCore" → Install
 3. Select board: Tools → Board → MiniCore → ATmega328
 4. Configure settings:
-    -everything default except (LTO disabled)
+    - Everything default except (LTO disabled)
 
-### Required Libraries
+### Quick Library Installation
 
+**Option 1: Download Library Pack**
+1. Download [libraries folder](./libraries/) from this repository
+2. Extract to your Arduino libraries folder (`~/Documents/Arduino/libraries/`)
+
+**Option 2: Manual Installation**
 Install the following libraries through Arduino IDE Library Manager:
 
 **For CubeSat:**
@@ -147,3 +201,15 @@ The system transmits 11 float values (44 bytes total):
 - MPU6050 auto-calibrates on startup
 - Keep device stationary during initialization
 - Temperature readings may need offset adjustment
+
+## 🔗 External Resources
+
+- [MiniCore GitHub Repository](https://github.com/MCUdude/MiniCore) - ATmega328P bootloader
+- [Arduino IDE Downloads](https://www.arduino.cc/en/software) - Development environment
+
+## 📋 Downloads
+
+- 🚀 [Complete Project Package](https://github.com/sriza-n/cubesat/releases/download/1.1/cubesat.zip) - Full project with code, libraries, and documentation
+
+
+
