@@ -33,18 +33,17 @@ cubesat/
 ### Quick Start Files
 - 📄 [CubeSat Code](./cubesat.cpp) - Download satellite code
 - 📄 [Ground Station Code](./Ground.cpp) - Download receiver code
-- 📋 [Bill of Materials](./hardware/bom.csv) - Component list with part numbers
 
-### Documentation
+<!-- ### Documentation
 - 📖 [Setup Guide PDF](./docs/setup-guide.pdf) - Detailed installation instructions
 - 🔌 [Circuit Diagram](./docs/circuit-diagram.png) - Wiring schematic
-- 🖨️ [PCB Layout](./docs/pcb-layout.pdf) - PCB design files
+- 🖨️ [PCB Layout](./docs/pcb-layout.pdf) - PCB design files -->
 
 ### Libraries Package
 - 📦 [All Required Libraries](./libraries/) - Complete library collection
 - 🔗 [MiniCore Bootloader](https://github.com/MCUdude/MiniCore/releases/latest) - External link
 
-## 🖼️ Project Images
+<!-- ## 🖼️ Project Images
 
 ### Circuit Diagrams
 ![CubeSat Wiring Diagram](./docs/circuit-diagram.png)
@@ -55,7 +54,7 @@ cubesat/
 *Assembled CubeSat with all sensors mounted*
 
 ![Ground Station Setup](./docs/ground-station.jpg)
-*Ground station with RF receiver and Arduino Nano*
+*Ground station with RF receiver and Arduino Nano* -->
 
 ## Hardware Requirements
 
