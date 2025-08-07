@@ -141,7 +141,5 @@ void loop() {
     Serial.print(F(", "));
     Serial.print(ggWorld.z * mpu.get_gyro_resolution() * DEG_TO_RAD);
     Serial.print(F(", "));
-
-    delay(500);
   }
 }
