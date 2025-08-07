@@ -31,7 +31,7 @@ cubesat/
 ## 📥 Downloads
 
 ### Quick Start Files
-- 📄 [CubeSat Code](./CubeSat.cpp) - Download satellite code
+- 📄 [CubeSat Code](./cubesat.cpp) - Download satellite code
 - 📄 [Ground Station Code](./Ground.cpp) - Download receiver code
 - 📋 [Bill of Materials](./hardware/bom.csv) - Component list with part numbers
 
